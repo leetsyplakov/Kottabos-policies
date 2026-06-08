@@ -1,0 +1,63 @@
+:root {
+    --bg: #f7f3ec;
+    --card: #ffffff;
+    --text: #1f1a14;
+    --muted: #6b5f4f;
+    --accent: #b1472b;
+    --border: #e6ddcf;
+    --code-bg: #f1eadd;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #18130d;
+        --card: #221b12;
+        --text: #efe7da;
+        --muted: #b3a48f;
+        --accent: #e0915f;
+        --border: #382d1f;
+        --code-bg: #2a2014;
+    }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", Helvetica, Arial, sans-serif;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 22px 80px; }
+header { margin-bottom: 32px; }
+header a { color: var(--accent); text-decoration: none; font-size: 14px; letter-spacing: 0.02em; }
+h1 { font-size: 30px; line-height: 1.2; margin: 14px 0 6px; letter-spacing: -0.01em; }
+.lede { color: var(--muted); margin: 0 0 28px; font-size: 14px; }
+h2 { font-size: 18px; margin: 32px 0 8px; letter-spacing: 0.01em; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+strong { color: var(--text); }
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 28px;
+    box-shadow: 0 1px 2px rgba(31, 26, 20, 0.05);
+}
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+th { color: var(--accent); font-size: 13px; letter-spacing: 0.02em; }
+code { background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font: 13px/1.5 "SF Mono", Menlo, monospace; }
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+footer a { color: var(--accent); }
+.list-card {
+    display: block; padding: 18px 22px; margin-top: 14px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    text-decoration: none; color: var(--text);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.list-card:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(177, 71, 43, 0.14); }
+.list-card h3 { margin: 0 0 4px; font-size: 17px; color: var(--accent); }
+.list-card p  { margin: 0; color: var(--muted); font-size: 14px; }
